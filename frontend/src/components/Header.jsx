@@ -1,41 +1,51 @@
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import logo from '../Image/logo.png';
+import { GrHomeRounded } from "react-icons/gr";
 
 export default function Header() {
   const { currentUser } = useSelector(state => state.user);
-  
+  const isAdmin = currentUser && currentUser.email === 'admin@gmail.com'; // Check if the user is admin
+
   return (
-    <header className='bg-slate-200 shadow-sm'>
+    <header className='bg-black shadow-sm'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>  
         <Link to='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Pro</span>
-            <span className='text-slate-700'>Translator</span>
-          </h1>
+          <div className='flex justify-between'>
+            <img 
+              src={logo}
+              className='rounded-full w-7 h-7 me-2' 
+              alt="Logo"
+            />
+            <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
+              <span className='text-red-500'>Pro</span>
+              <span className='text-white'>Translator</span>
+            </h1>
+          </div>
         </Link>
 
-       
-
-        <ul className='flex gap-4'> 
+        <ul className='flex gap-4'>
           <Link to='/'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>Home</li>
+            <li className='hidden sm:inline text-white hover:text-red-500 font-semibold'>
+              <div className='flex justify-between'>
+                <GrHomeRounded className='me-2 my-1' />Home
+              </div>
+            </li>
           </Link>
-         
-          <Link to='/profile'>
-            {currentUser ? (
+
+          {currentUser ? (
+            <Link to={isAdmin ? '/admin' : '/profile'}> {/* Conditional navigation */}
               <img 
                 src={currentUser.avatar} 
                 alt={currentUser.name} 
                 title={currentUser.name} 
                 className='rounded-full w-7 h-7 object-cover' 
               />
-            ) : null }
-          </Link>
-
-          {!currentUser && ( 
+            </Link>
+          ) : (
             <Link to='/signin'>
-              <li className='text-slate-700 hover:underline'>Sign In</li>
+              <li className='text-white hover:text-red-500 font-semibold'>Sign In</li>
             </Link>
           )}
         </ul>
