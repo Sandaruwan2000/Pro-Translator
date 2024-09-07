@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Userdashboard from '../components/Userdashboard';
+import Userdashboard from '../../components/Userdashboard';
 
 export default function Membership() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);

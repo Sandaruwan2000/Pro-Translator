@@ -11,7 +11,8 @@ import Admindashboard from './components/Admindashboard';
 import Admin from './pages/Admin';
 import Profile from './pages/Profile';
 import Userdashboard from './components/Userdashboard';
-import Membership from './pages/Membership';
+import Membership from './pages/Chamishka/Membership';
+
 
 
 export default function App() {
