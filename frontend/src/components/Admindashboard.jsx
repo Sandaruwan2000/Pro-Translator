@@ -26,7 +26,7 @@ export default function Admindashboard() {
         <div className="font-bold text-white p-3 flex justify-between items-center">
           <span className='flex items-center'>
             <GrMenu  className="mr-2 my-1.5   text-large   text-white  hover:text-red-500" />
-            <span className='ml-2 text-large my-1'>Dashboard</span>
+            <span className='ml-2 text-large my-1 '>Dashboard</span>
           </span>
           <button className="md:hidden text-white text-xl" onClick={toggleSidebar}>
             <GrClose />
@@ -35,29 +35,29 @@ export default function Admindashboard() {
 
         
         <ul className='font-bold'>
-          <Link to="/">
+          <Link to="/addemoji">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrAddCircle className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Add Emoji
+              <GrAddCircle className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Add Emoji
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrAppsRounded className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Emoji
+              <GrAppsRounded className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Emoji
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrChapterAdd className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Add Package
+              <GrChapterAdd className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Add Package
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrAd className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Package
+              <GrAd className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Package
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrGroup className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Feedback
+              <GrGroup className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Feedback
             </li>
           </Link>
         </ul>
