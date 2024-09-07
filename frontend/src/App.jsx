@@ -12,6 +12,7 @@ import Admin from './pages/Admin';
 import Profile from './pages/Profile';
 import Userdashboard from './components/Userdashboard';
 import Membership from './pages/Chamishka/Membership';
+import Addemoji from './pages/Lahiru/Addemoji';
 
 
 
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/userdashboard" element={<Userdashboard/>} />
         <Route path="/Membership" element={<Membership/>} />
+        <Route path="/addemoji" element={<Addemoji/>} />
 
      </Routes>
      </BrowserRouter>
