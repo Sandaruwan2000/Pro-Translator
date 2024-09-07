@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import authRoutes from './routes/auth.route.js';
 import userRoutes from './routes/user.route.js';
+import emojiRoutes from './routes/emoji.route.js'
 
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
@@ -30,6 +31,7 @@ app.listen(3000, () => {
 
   app.use('/backend/auth', authRoutes);
   app.use('/backend/user', userRoutes);
+  app.use('/backend/emoji', emojiRoutes);
  
 
  
