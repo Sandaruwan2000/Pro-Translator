@@ -13,6 +13,11 @@ import Profile from './pages/Profile';
 import Userdashboard from './components/Userdashboard';
 import Membership from './pages/Chamishka/Membership';
 import Addemoji from './pages/Lahiru/Addemoji';
+import Allemoji from './pages/Lahiru/Allemoji';
+import UpdateEmoji from './pages/Lahiru/UpdateEmoji';
+import Emojitranslator from './pages/Lahiru/Emojitranslator';
+import History from './pages/Lahiru/History';
+import Feature from './pages/Lahiru/Feature';
 
 
 
@@ -33,7 +38,11 @@ export default function App() {
         <Route path="/userdashboard" element={<Userdashboard/>} />
         <Route path="/Membership" element={<Membership/>} />
         <Route path="/addemoji" element={<Addemoji/>} />
-
+        <Route path="/allemoji" element={<Allemoji/>} />
+        <Route path="/allemoji/updateemoji/:id" element={<UpdateEmoji/>} />
+        <Route path="/emojitranslator" element={<Emojitranslator/>} />
+        <Route path="/history" element={<History/>} />
+        <Route path="/feature" element={<Feature/>} />
      </Routes>
      </BrowserRouter>
   )

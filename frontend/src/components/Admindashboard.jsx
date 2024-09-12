@@ -37,27 +37,27 @@ export default function Admindashboard() {
         <ul className='font-bold'>
           <Link to="/addemoji">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrAddCircle className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Add Emoji
+              <GrAddCircle className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Add Emoji
+            </li>
+          </Link>
+          <Link to="/allemoji">
+            <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
+              <GrAppsRounded className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Emoji
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrAppsRounded className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Emoji
+              <GrChapterAdd className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Add Package
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrChapterAdd className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Add Package
+              <GrAd className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Package
             </li>
           </Link>
           <Link to="/">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrAd className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Package
-            </li>
-          </Link>
-          <Link to="/">
-            <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-              <GrGroup className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Feedback
+              <GrGroup className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Feedback
             </li>
           </Link>
         </ul>
