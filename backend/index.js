@@ -4,6 +4,8 @@ import authRoutes from './routes/auth.route.js';
 import userRoutes from './routes/user.route.js';
 import emojiRoutes from './routes/emoji.route.js'
 import historyRoutes from './routes/history.route.js'
+import packageRoutes from './routes/package.route.js'
+import feedbackRoutes from './routes/feedback.route.js'
 
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
@@ -34,8 +36,8 @@ app.listen(3000, () => {
   app.use('/backend/user', userRoutes);
   app.use('/backend/emoji', emojiRoutes);
   app.use('/backend/history', historyRoutes);
- 
-
+  app.use('/backend/package', packageRoutes);
+  app.use('/backend/feedback', feedbackRoutes);
  
 
   

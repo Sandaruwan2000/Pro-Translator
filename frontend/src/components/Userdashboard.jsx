@@ -53,7 +53,7 @@ export default function Userdashboard() {
                 <GrInProgress  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />History
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/Userfeedback">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
                 <GrGroup className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Feedback
               </li>

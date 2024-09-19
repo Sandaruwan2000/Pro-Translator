@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Userdashboard from '../../components/Userdashboard';
 import axios from 'axios';
-import { GrTransaction } from 'react-icons/gr';
+import { GrStarOutline, GrTransaction } from 'react-icons/gr';
 import { useSelector } from 'react-redux';
 import b1 from '../../Image/e3.jpg';
+import { Link, useNavigate } from 'react-router-dom';
 
 const styles = {
     backgroundImage: `url(${b1})`,
@@ -22,6 +23,7 @@ export default function Emojitranslator() {
     const [filteredEmojiByMeaning, setFilteredEmojiByMeaning] = useState(null); 
     const [showMeaningSearch, setShowMeaningSearch] = useState(false); 
     const [showEmojiSearch, setShowEmojiSearch] = useState(false); 
+    const navigate = useNavigate(); // Create navigate function
 
     const email = currentUser.email;
 
@@ -117,6 +119,10 @@ export default function Emojitranslator() {
         setShowEmojiSearch(true);
     };
 
+    const feedback = () => {
+        navigate('/AddFeedback'); 
+    };
+
     return (
         <div className='flex' >
             <div>
@@ -125,7 +131,7 @@ export default function Emojitranslator() {
 
             <div className="ml-auto flex-1 overflow-y-auto" >
                 <div>
-                    <h1 className='text-3xl text-center font-bold my-5 text-black'>Emoji Translator</h1>
+                    <h1 className='text-3xl text-center font-bold font-serif my-5 text-black'>Emoji Translator</h1>
 
                     {!showMeaningSearch && !showEmojiSearch ? (
                         <div className='flex gap-14 ml-16 my-20'>
@@ -255,6 +261,12 @@ export default function Emojitranslator() {
                         </div>
                     ) : null}
                 </div>
+                
+                    <div className='ml-16 -mt-16' onClick={feedback}>
+                    <div className='font-serif text-blue-700 ml-96 '><button className='ml-96 flex flex-row gap-3' style={{fontStyle:'italic'}}>Feedbacks<div className='flex flex-row mt-0.5' ><GrStarOutline /><GrStarOutline /><GrStarOutline /></div></button></div>
+
+                    </div>
+                
             </div>
         </div>
     );

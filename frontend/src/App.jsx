@@ -18,6 +18,15 @@ import UpdateEmoji from './pages/Lahiru/UpdateEmoji';
 import Emojitranslator from './pages/Lahiru/Emojitranslator';
 import History from './pages/Lahiru/History';
 import Feature from './pages/Lahiru/Feature';
+import GlobeDemo from './pages/Lahiru/GlobeDemo';
+import GlobeComponent from './components/GlobeComponent';
+import Addpackage from './pages/Chamishka/Addpackgae';
+import Allpackage from './pages/Chamishka/Allpackage';
+import Updatepackage from './pages/Chamishka/Updatepackage';
+import AddFeedback from './pages/Chamishka/AddFeedback';
+import Allfeedback from './pages/Chamishka/Allfeedback';
+import Userfeedback from './pages/Chamishka/Userfeedback';
+import UpdateFeedback from './pages/Chamishka/UpdateFeedback';
 
 
 
@@ -43,6 +52,17 @@ export default function App() {
         <Route path="/emojitranslator" element={<Emojitranslator/>} />
         <Route path="/history" element={<History/>} />
         <Route path="/feature" element={<Feature/>} />
+        <Route path="/fe" element={<GlobeDemo/>} />
+        <Route path="/GlobeComponent" element={<GlobeComponent/>} />
+        <Route path="/Addpackage" element={<Addpackage/>} />
+        <Route path="/Allpackage" element={<Allpackage/>} />
+        <Route path="/Allpackage/Updatepackage/:id" element={<Updatepackage/>} />
+        <Route path="/AddFeedback" element={<AddFeedback/>} />
+        <Route path="/Allfeedback" element={<Allfeedback/>} />
+        <Route path="/Userfeedback" element={<Userfeedback/>} />
+        <Route path="/Userfeedback/UpdateFeedback/:id" element={<UpdateFeedback/>} />
+
+
      </Routes>
      </BrowserRouter>
   )

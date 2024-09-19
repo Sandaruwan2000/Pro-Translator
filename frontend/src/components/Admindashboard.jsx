@@ -45,17 +45,17 @@ export default function Admindashboard() {
               <GrAppsRounded className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Emoji
             </li>
           </Link>
-          <Link to="/">
+          <Link to="/Addpackage">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
               <GrChapterAdd className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Add Package
             </li>
           </Link>
-          <Link to="/">
+          <Link to="/Allpackage">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
               <GrAd className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Package
             </li>
           </Link>
-          <Link to="/">
+          <Link to="/Allfeedback">
             <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
               <GrGroup className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Feedback
             </li>
