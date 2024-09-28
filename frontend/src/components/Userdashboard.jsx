@@ -35,25 +35,25 @@ export default function Userdashboard() {
           <ul className='font-bold'>
             <Link to="/Membership">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-                <GrStarOutline  className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Membership Plans
+                <GrStarOutline  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Membership Plans
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/emojitranslator">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-                <GrLanguage  className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Emoji Translator
+                <GrLanguage  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Emoji Translator
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/feature">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-                <GrServices  className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Feature
+                <GrServices  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Feature
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/history">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-                <GrInProgress  className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />History
+                <GrInProgress  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />History
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/Userfeedback">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
                 <GrGroup className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Feedback
               </li>
