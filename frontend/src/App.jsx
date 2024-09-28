@@ -1,12 +1,13 @@
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-
+import '@fortawesome/fontawesome-free/css/all.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Hearder from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import User from './components/User';
-import Home from './pages/Home';
+import Navigater from './pages/Navigater';
 import Admindashboard from './components/Admindashboard';
 import Admin from './pages/Admin';
 import Profile from './pages/Profile';
@@ -27,17 +28,67 @@ import AddFeedback from './pages/Chamishka/AddFeedback';
 import Allfeedback from './pages/Chamishka/Allfeedback';
 import Userfeedback from './pages/Chamishka/Userfeedback';
 import UpdateFeedback from './pages/Chamishka/UpdateFeedback';
+import NavBar from './components/Accsesories/Navbar/Navbar';
+
+/*Import layouts*/
+import UserHomeLayout from './pages/Shachiru/Layouts/UserHomeLayout';
+import Otherlayouts from './pages/Shachiru/Layouts/OtherLayouts';
 
 
+/*Shachiru*/
+import Home from './pages/Shachiru/UserHome/Pages/Home/Home';
+import Translator from './pages/Shachiru/UserHome/Pages/Home/Translate';
+import Card from './pages/Shachiru/UserHome/Pages/checkout/Card';
+import Recipt from './pages/Shachiru/UserHome/Pages/checkout/Recipt';
+import UserAgree from './pages/Shachiru/UserHome/Pages/checkout/UserAgree';
+import Checkout from './pages/Shachiru/UserHome/Pages/checkout/Checkout';
+import MyOrders from './pages/Shachiru/UserHome/Pages/Myorders';
+
+/*****Supun***** */
+import FavoritePage from './pages/Shachiru/UserHome/Pages/Home/FavoritePage';
+import GlossaryPage from './pages/Shachiru/UserHome/Pages/Glossery/GlossaryPage';
+
+
+/********************** */
 
 export default function App() {
   return (
     <BrowserRouter>
 
-    <Hearder/>
-     <Routes>
 
-        <Route path="/" element={<Home />} />
+     <Routes>
+        {/*-------------------------Home layout--------------------------*/}
+
+        <Route path="/UserHome" element={<UserHomeLayout />} >
+
+            <Route index element={<Home/>}/>
+            <Route path='/UserHome/translater' element={<Translator/>}/>
+            <Route path='/UserHome/favorites' element={<FavoritePage/>}/>
+            <Route path='/UserHome/glossery' element={<GlossaryPage/>}/>
+            <Route path='/UserHome/checkout/recipt/:id' element={<Recipt/>}/>
+ <Route path='/UserHome/checkout/card/:id' element={<Card/>}/>
+ <Route path='/UserHome/checkout/terms/:id' element={<UserAgree/>}/>
+ <Route path='/UserHome/checkout/:id' element={<Checkout/>}/>
+          
+          
+           
+       
+            
+
+
+
+        </Route>
+       
+
+
+        {/*-------------------------Home layout--------------------------*/}
+       
+
+        {/*-------------------------Other layout--------------------------*/}
+        <Route path="/" element={<Otherlayouts />} >
+    
+       
+        <Route index element={<Navigater />} />
         <Route path="/signin" element={<Signin/>} />
         <Route path="/user" element={<User/>} />
         <Route path="/signup" element={<Signup/>} />
@@ -61,6 +112,19 @@ export default function App() {
         <Route path="/Allfeedback" element={<Allfeedback/>} />
         <Route path="/Userfeedback" element={<Userfeedback/>} />
         <Route path="/Userfeedback/UpdateFeedback/:id" element={<UpdateFeedback/>} />
+
+
+
+</Route>
+
+
+
+
+
+       
+
+        {/*-------------------------Other layout--------------------------*/}
+      
 
 
      </Routes>
