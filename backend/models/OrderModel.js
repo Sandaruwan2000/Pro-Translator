@@ -1,5 +1,5 @@
 //import packages
-const mongoose=require("mongoose");
+import mongoose from "mongoose";
 
 const schema=mongoose.Schema;
 
@@ -7,9 +7,9 @@ const schema=mongoose.Schema;
 
 const Order_Scheama=new schema({
     orderID:{type:String},
-    ProductID:{type:mongoose.Schema.Types.ObjectId,ref:"pkges",required:true},
+    ProductID:{type:schema.Types.ObjectId,ref:"Package",required:true},
     total:{type:Number},
-    userID: { type: Number}
+    userID: { type:schema.Types.ObjectId,ref:"User",required:true}
 
 
 
@@ -21,4 +21,4 @@ const Order_Scheama=new schema({
 
 const Order=mongoose.model("Order",Order_Scheama);
 
-module.exports=Order;
+export default Order;

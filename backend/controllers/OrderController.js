@@ -1,7 +1,7 @@
-import Order from "../models/OrderModel.js";
+import Order, { find, findByIdAndDelete } from "../model/OrderModel";
 
 
-export const SaveOrder=async(req,res)=>{
+export async function SaveOrder(req,res){
 
 const Uid=req.params.uid;
 
@@ -52,11 +52,11 @@ const Uid=req.params.uid;
     }
 
 
-    export const getAllOrdersofUser=async(req,res)=>{
+    export async function     getAllOrdersofUser(req,res){
 
         const userID = req.params.uid;
 
-        await Order.find({userID}).populate("ProductID").then((orders)=>{
+        await find({userID}).populate("ProductID").then((orders)=>{
         
         res.json(orders);
         
@@ -71,11 +71,11 @@ const Uid=req.params.uid;
 
 
     
-        export const deleteOrder=async(req,res)=>{
+   export async function    deleteOrder(req,res){
 
     let Orderid=req.params.oid;
 
-    await Order.findByIdAndDelete(Orderid).then(()=>{
+    await findByIdAndDelete(Orderid).then(()=>{
         res.status(200).send({status:"Order Deleted"})
   
      }).catch((err)=>{
