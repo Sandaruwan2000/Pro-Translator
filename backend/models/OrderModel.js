@@ -7,7 +7,7 @@ const schema=mongoose.Schema;
 
 const Order_Scheama=new schema({
     orderID:{type:String},
-    ProductID:{type:mongoose.Schema.Types.ObjectId,ref:"Package",required:true},
+    ProductID:{type:mongoose.Schema.Types.ObjectId,ref:"pkges",required:true},
     total:{type:Number},
     userID: { type: Number}
 

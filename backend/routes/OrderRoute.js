@@ -1,13 +1,9 @@
-
 import express from 'express';
-const Router=express.Router();
 
-import {SaveOrder,getAllOrdersofUser,deleteOrder} from "../controllers/OrderController";
-
-
-Router.post("/addOrder/:uid",SaveOrder);
-Router.get("/fetchAll/:uid",getAllOrdersofUser);
-Router.delete("/delete/:oid",deleteOrder);
+import { deleteOrder } from '../controllers/Order.controller';
 
 
-export default Router;
+const router = express.Router();
+
+
+export default router ; 

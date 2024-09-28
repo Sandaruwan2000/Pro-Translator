@@ -6,7 +6,8 @@ import emojiRoutes from './routes/emoji.route.js';
 import historyRoutes from './routes/history.route.js';
 import packageRoutes from './routes/package.route.js';
 import feedbackRoutes from './routes/feedback.route.js';
-import OrderRouter from './routes/OrderRoute.js';
+import OrderRoute from './routes/OrderRoute.js';
+
 
 
 
@@ -44,7 +45,7 @@ app.listen(5000, () => {
  
 
 
-app.use("/order",OrderRouter);
+
 
 
   
