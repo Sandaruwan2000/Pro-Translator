@@ -1,0 +1,584 @@
+.float-container {
+  
+  padding: 20px;
+  height: 80vh;
+  border-radius: 20px;
+}
+
+.float-child {
+  width: 48%;
+  margin: 10px;
+  height: 98%;
+backdrop-filter: blur(2px);
+
+
+  border: 2px solid  #fa8415;
+  box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+  padding: 20px;
+  border-radius: 20px;
+
+}  
+.float-child.left{
+
+  float: left;
+}
+
+.float-child.right{
+
+  float: right;
+}
+
+.float-child.left .Lang{
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 150px;
+  height: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius:20px ;
+  background-color: #fa8415;
+  box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+  float: left;
+  padding: 20px;
+  padding-top:60px;
+  padding-right: 50px;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+  z-index: 6;
+
+
+}
+
+.float-child.left .Lang.speech{
+  display: block;
+border: none;
+  position: fixed;
+  bottom: 300px;
+  left: 0px;
+  width: 75px;
+  height: 75px;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius:75px ;
+  border-bottom-left-radius:0 ;
+  background-color: #fa8415;
+  box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+  float: left;
+  padding: 18px;
+  padding-left: 13px;
+
+
+  font-size: 28px;
+  cursor: pointer;
+
+
+}
+.float-child.left .Lang.speech i{
+  color: black;
+
+
+
+}
+.float-child.left .Lang.speech:active{
+  border: none;
+  opacity: 0.6;
+}
+
+.float-child.left .Lang.listening{
+
+  display: block;
+  border: none;
+    position: absolute;
+    bottom: 230px;
+    left: 42%;
+    width: 75px;
+    height: 75px;
+border-radius: 50%;
+align-items: center;
+    background-color: #fa1515;
+    box-shadow:  0 0 5px #f22323, 0 0 5px #f22623 inset;
+ 
+    padding: 18px;
+  
+
+ 
+    font-size: 28px;
+    cursor: pointer;
+    animation: listening 1.4s infinite;
+}
+
+
+
+@keyframes listening {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.float-child.left .Lang.listening i{
+
+
+
+}
+
+
+
+
+
+
+
+.float-child.right .Lang{
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  width: 150px;
+  height: 150px;
+  border-top-left-radius: 150px;
+  border-bottom-right-radius:20px ;
+  background-color: #fa8415;
+  box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+  float: right;
+  padding: 20px;
+  padding-top:60px;
+  padding-left: 50px;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+
+
+}
+
+.float-child.right .Lang.TransDone{
+  display: block;
+  position: fixed;
+  bottom: 375px;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius:75px ;
+  border-bottom-right-radius:0 ;
+  background-color: #fa8415;
+  box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+border: none;
+  padding: 18px;
+  padding-right: 13px;
+
+
+
+
+
+
+}
+
+
+.float-child.right .Lang.Save{
+display: block;
+  position: fixed;
+  bottom: 275px;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius:75px ;
+  border-bottom-right-radius:0 ;
+  background-color: #15fa30;
+  box-shadow:  0 0 5px #5dbf63, 0 0 5px #5dbf63 inset;
+border: none;
+  padding: 18px;
+  padding-right: 13px;
+
+}
+
+.float-child.right .Lang.TransDone i{
+  color: black;
+}
+
+.float-child.right .Lang.TransDone:active{
+  opacity: 0.6;
+}
+
+.float-child.left .Lang:hover{
+  transform: scale(1.2); 
+
+
+}
+.float-child.right .Lang:hover{
+  transform: scale(1.2); 
+
+
+}
+
+
+
+/*Toggler*/
+
+.glossery{
+position: fixed;
+bottom: 170px;
+left:44%;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+padding: 0;
+
+
+border-radius: 60px;
+
+width: 180px;
+height: 60px;
+
+
+
+
+backdrop-filter: blur(9.2px);
+-webkit-backdrop-filter: blur(9.2px);
+
+
+border: 2px solid #fa8415;
+box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+
+overflow: hidden;
+z-index: 5;
+
+
+}
+
+.glossery .tgl {
+display: none;
+
+&,
+&:after,
+&:before,
+& *,
+& *:after,
+& *:before,
+& + .tgl-btn {
+  box-sizing: border-box;
+  &::selection {
+    background: none;
+  }
+}
+
++ .tgl-btn {
+  outline: 0;
+  display: block;
+  margin: 0%;
+  
+width: 180px;
+height: 60px;
+
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 20%;
+  padding: 6%;
+  &:after,
+  &:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+  }
+  
+  &:after {
+    left: 0;
+  }
+  
+  &:before {
+    display: none;
+  }
+}
+
+&:checked + .tgl-btn:after {
+  left: 50%;
+}
+}
+
+.glossery .tgl-skewed {
++ .tgl-btn {
+  overflow: hidden;
+  
+  backface-visibility: hidden;
+  transition: all .2s ease;
+  font-family: sans-serif;
+  background:transparent;
+  &:after,
+  &:before {
+    
+    display: inline-block;
+    transition: all .2s ease;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 2em;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.4);
+  }
+  
+  &:after {
+    left: 100%;
+    font-family: "Font Awesome 6 Free";
+    content: "\f530   ON";
+  }
+  
+  &:before {
+    left: 0;
+    font-family: "Font Awesome 6 Free";
+    content: "\f530  OFF";
+    color:#000;
+  }
+  
+  &:active {
+    background: #de9c54;
+    &:before {
+      left: -10%;
+    }
+  }
+}
+
+&:checked + .tgl-btn {
+  background: #fa8415;
+  &:before {
+    left: -100%;
+  }
+
+  &:after {
+    left: 0;
+  }
+
+  &:active:after {
+    left: 10%;
+  }
+}
+}
+
+
+
+.Troggler {
+  position: fixed;
+  bottom: 60px;
+  left:40%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  
+
+border-radius: 60px;
+
+width: 300px;
+height: 100px;
+
+
+
+
+backdrop-filter: blur(9.2px);
+-webkit-backdrop-filter: blur(9.2px);
+
+
+border: 2px solid #fa8415;
+box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+
+overflow: hidden;
+z-index: 5;
+}
+
+.Troggler div{
+
+position: relative;
+
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+  font-size: 36px;
+  box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+  text-shadow: 0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+ background-color: #fa8415;
+
+
+
+}
+.Troggler  #togL{
+
+
+  transition: 0.8s ease all, right 0.8s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  transform: translate(0px);
+ 
+}
+.Troggler  #togL.activeL{
+
+  
+
+transform: translate(200px);
+  transition: 0.8s ease all, left 0.8s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+
+ 
+}
+
+.Troggler #togR{
+
+
+  transform: translate(0px);
+  transition: 0.8s ease all, left 0.8s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+
+}
+.Troggler  #togR.activeR{
+
+ 
+
+  transition: 0.8sease all, left 0.8s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  transform: translate(-200px);
+
+ 
+}
+.Troggler div.togM{
+
+  cursor: pointer;
+  margin-top: -2px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+  height: 90px;
+  width: 90px;
+  background:transparent;
+  border: 2px solid #fa8415;
+  z-index: 5;
+  align-items: center;
+  align-content: center;
+
+  color: #000000;
+  text-shadow: 0 0 5px #2d2c2c, 0 0 5px #2d2c2c inset;
+}
+
+.Troggler div.togM:hover{
+  transform: scale(0.8);
+  transition: 0.3s ease all, right 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+
+/*Translate Btn*/
+
+.Translate-btn{
+
+  position: fixed;
+  bottom:37%;
+  left:45%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  cursor: pointer;
+
+border-radius: 50%;
+
+width: 150px;
+height: 150px;
+
+
+
+background-color: #fa8415;
+backdrop-filter: blur(9.2px);
+-webkit-backdrop-filter: blur(9.2px);
+font-size: 28px;
+
+
+border: 2px solid #fa8415;
+box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+
+overflow: hidden;
+z-index: 5;
+}
+.Translate-btn:hover{
+  transform: scale(1.1);
+
+
+
+}
+.Translate-btn:focus{
+  background: transparent;
+}
+
+
+/*text box*/
+
+.Sourcetext{
+
+  background:transparent;
+  border-radius: 20px;
+border: none;
+  width: 100%;
+  padding: 5%;
+  margin-top: 10px;
+
+}
+
+.Sourcetext:focus{
+
+  background:transparent;
+
+outline-color: orangered;
+
+
+}
+
+
+.form-heading{
+
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.loader{
+
+  position: relative;
+  align-items: center;
+  z-index: 6;
+font-size: 30px;
+ 
+}
+
+/*Alert*/
+.Alert{
+
+z-index: 7;
+position: absolute;
+left:40%;
+width: 20%;
+text-align: center;
+align-items: center;
+background-color: #e6a971;
+border-color: #fa8415;
+color: #904906;
+border-radius: 15px;
+
+}
+
+.translated{
+
+border: none;
+outline: none;
+cursor: auto;
+}
+

@@ -1,0 +1,11 @@
+
+   
+    .UserHome{
+        display: block;
+    
+      background-image: url("../../../components/Accsesories/Images/Back.png");
+      background-size: cover;
+      height: 100vh;
+      color: rgb(0, 0, 0);
+    
+    }
