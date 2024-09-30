@@ -22,11 +22,9 @@ export default function Card(){
 
 <div >
   <div className="Creditcard">
-   <button className="proceed" onClick={btnClick}><svg className="sendicon" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-      </svg></button>
+   <button className="proceed" onClick={btnClick}><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
     <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" className="logo-card"/>
-    <label>Card number:</label>
+    <label className="cardNo">Card number:</label>
     <input id="user" type="text" className="input cardnumber" placeholder="1234 5678 9101 1121"/>
     <label>Name:</label>
     <input className="input name" placeholder="T.U Imbulana"/>

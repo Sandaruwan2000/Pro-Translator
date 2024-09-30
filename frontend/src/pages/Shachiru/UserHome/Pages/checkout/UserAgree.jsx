@@ -13,7 +13,7 @@ export default function UserAgree(){
 
     const btnClick=()=>{
 
-        navigate(`/checkout/card/${id}`)
+        navigate(`/UserHome/checkout/card/${id}`)
             }
 return(
 

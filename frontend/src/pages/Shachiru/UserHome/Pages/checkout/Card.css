@@ -68,7 +68,12 @@
     font-size: 15px;
   }
   
- 
+ .Creditcard .cardNo{
+
+  width: 100px;
+
+
+ }
 
   .Creditcard .comprobe {
     text-align: center;
@@ -83,6 +88,11 @@
     border: none;
     color: rgb(0, 0, 0);
     transition: box-shadow 0.2s, transform 0.4s;
+    cursor: pointer;
+    padding:13px;
+  }
+  .Creditcard .proceed i{
+
     cursor: pointer;
   }
   .Creditcard .proceed:active {

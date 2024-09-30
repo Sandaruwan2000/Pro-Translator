@@ -69,6 +69,7 @@ export default function App() {
  <Route path='/UserHome/checkout/card/:id' element={<Card/>}/>
  <Route path='/UserHome/checkout/terms/:id' element={<UserAgree/>}/>
  <Route path='/UserHome/checkout/:id' element={<Checkout/>}/>
+ <Route path="/UserHome/Membership" element={<Membership/>} />
           
           
            
@@ -96,7 +97,7 @@ export default function App() {
         <Route path="/admin" element={<Admin/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/userdashboard" element={<Userdashboard/>} />
-        <Route path="/Membership" element={<Membership/>} />
+  
         <Route path="/addemoji" element={<Addemoji/>} />
         <Route path="/allemoji" element={<Allemoji/>} />
         <Route path="/allemoji/updateemoji/:id" element={<UpdateEmoji/>} />
