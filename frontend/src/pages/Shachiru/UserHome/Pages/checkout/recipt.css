@@ -2,8 +2,10 @@
 /* The Receipt */
 .receipt {
     width: 360px;
-    height: 720px;
+    height: 800px;
     background-color: rgb(233, 134, 85);
+    background-image: url("../../../../../Image/recipt.jpg");
+    background-size: cover;
     border-radius: 30px;
     position: relative;
         left: 50%;
@@ -21,7 +23,7 @@
     text-transform: uppercase;
    
     justify-content: center;
-    color: #000000;
+    color: #ffffff;
     letter-spacing: 10px;
     font-size: 1.8em;
     margin: 10px;
@@ -36,13 +38,13 @@
  
   .receipt .order p {
     font-size: 13px;
-    color: #000000;
+    color: #ffffff;
     padding-left: 10px;
     letter-spacing: .7px
   }
 
   .receipt hr {
-    border: .7px solid #000000;
+    border: .7px solid #ed6b00;
     margin: 15px 0;
   }
   
@@ -55,7 +57,7 @@
   
   .receipt .details h3 {
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
     font-size: 1.5em;
     margin-bottom: 15px
   }
@@ -77,7 +79,7 @@
   }
   
   .receipt .product .info h4 {
-    color: #000000;
+    color: #ffffff;
     font-weight: 400;
     text-transform: uppercase;
     margin-top: 10px
@@ -85,12 +87,12 @@
   
   .product .info p {
     font-size: 12px;
-    color: #000000;
+    color: #ffffff;
   }
   
   /* Net price */
   .receipt .details > p {
-    color: #000000;
+    color: #ffffff;
     margin-top: 25px;
     font-size: 15px
   }
@@ -103,7 +105,7 @@
   .receipt .totalprice .sub,
   .totalprice .del {
     font-size: 13px;
-    color: #000000
+    color: #ffffff
   }
   
   .receipt .totalprice span.Pricelist {
@@ -112,7 +114,7 @@
   }
   
   .receipt .totalprice .tot {
-    color: #000000;
+    color: #ffffff;
     font-size: 15px
   }
   
@@ -121,7 +123,7 @@
     font-size: 10px;
     text-align: center;
     margin-top: 135px; 
-    color: #000000
+    color: #ffffff;
   }
 
   .receipt .btnSpan{

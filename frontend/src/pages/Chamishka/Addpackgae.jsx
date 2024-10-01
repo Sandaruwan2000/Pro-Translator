@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Addpackage() {
   // Form state
   const [formData, setFormData] = useState({
+    PkgCode:'',
     name: '',
     duration: '',
     details: '',
@@ -33,6 +34,7 @@ export default function Addpackage() {
       setError('');
       // Reset the form after submission
       setFormData({
+        PkgCode:'',
         name: '',
         duration: '',
         details: '',
@@ -62,6 +64,18 @@ export default function Addpackage() {
             <div className="w-1/2 p-10 flex flex-col justify-center">
               <h2 className="text-3xl font-semibold mb-6">Create a Package</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                  <label className="block text-sm font-medium text-gray-700">Package Code</label>
+                  <input
+                    type="text"
+                    id="PkgCode"
+                    value={formData.PkgCode}
+                    onChange={handleChange}
+                    placeholder="Enter package Code"
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                  />
+                </div>
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Package Type</label>
                   <input
@@ -81,7 +95,7 @@ export default function Addpackage() {
                     id="duration"
                     value={formData.duration}
                     onChange={handleChange}
-                    placeholder="Enter duration"
+                    placeholder="Enter duration In Months"
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
                   />
                 </div>

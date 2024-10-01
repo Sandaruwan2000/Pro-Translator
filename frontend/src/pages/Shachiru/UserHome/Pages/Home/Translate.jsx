@@ -216,15 +216,7 @@ let timer = ()=>{setTimeout(() => {
             {isLoading ? (
               <div className="d-flex align-items-center">
                
-               <RiseLoader
-               className="loader"
-  color="black"
-  loading
-  margin={0}
-  size={58}
-  speedMultiplier={1}
-
-/>
+               <span class="loader"></span>
               
               </div>
             ) : (

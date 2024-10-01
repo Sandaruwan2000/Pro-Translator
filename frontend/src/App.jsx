@@ -70,6 +70,7 @@ export default function App() {
  <Route path='/UserHome/checkout/terms/:id' element={<UserAgree/>}/>
  <Route path='/UserHome/checkout/:id' element={<Checkout/>}/>
  <Route path="/UserHome/Membership" element={<Membership/>} />
+ <Route path="/UserHome/emojitranslator" element={<Emojitranslator/>} />
           
           
            
@@ -101,7 +102,7 @@ export default function App() {
         <Route path="/addemoji" element={<Addemoji/>} />
         <Route path="/allemoji" element={<Allemoji/>} />
         <Route path="/allemoji/updateemoji/:id" element={<UpdateEmoji/>} />
-        <Route path="/emojitranslator" element={<Emojitranslator/>} />
+       
         <Route path="/history" element={<History/>} />
         <Route path="/feature" element={<Feature/>} />
         <Route path="/fe" element={<GlobeDemo/>} />

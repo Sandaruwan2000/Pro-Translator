@@ -12,7 +12,7 @@ export default function Card(){
     const navigate=useNavigate();
     const btnClick=()=>{
 
-        navigate(`/checkout/recipt/${id}`)
+        navigate(`/UserHome/checkout/recipt/${id}`)
             }
 
 
@@ -28,8 +28,8 @@ export default function Card(){
     <input id="user" type="text" className="input cardnumber" placeholder="1234 5678 9101 1121"/>
     <label>Name:</label>
     <input className="input name" placeholder="T.U Imbulana"/>
-    <label className="toleft">CCV:</label>
-    <input className="input toleft ccv" placeholder="321"/>
+    <label className="toleft">CCV : </label>
+    <input className="input toleft ccv" placeholder=" 321"/>
   </div>
 </div>
 

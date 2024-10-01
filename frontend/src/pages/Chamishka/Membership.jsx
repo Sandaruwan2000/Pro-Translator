@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Userdashboard from '../../components/Userdashboard';
 import { useNavigate } from 'react-router-dom';
+import "./Membership.css"
 
 export default function Membership() {
   const [formData, setFormData] = useState([]);
@@ -60,7 +61,7 @@ export default function Membership() {
           <h1 className="text-3xl font-bold mb-6 text-center">Membership Packages</h1>
         </div>
         <div className="w-full max-w-5xl p-6">
-          <div className="mb-6 w-96 mx-auto">
+          <div className="mb-6 w-96 mx-auto searchPkg">
             <input
               type="text"
               onChange={handleSearch}
@@ -72,7 +73,7 @@ export default function Membership() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {formData.map((pack) => (
-              <div key={pack._id} className="p-6 border rounded-lg shadow-md transition duration-300 hover:shadow-lg">
+              <div key={pack._id} className="p-6 border rounded-lg shadow-md transition duration-300 hover:shadow-lg pkg">
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-orange-600">{pack.name}</h3>
                   <p className="text-4xl font-bold mt-4">${pack.price}</p>
