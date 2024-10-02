@@ -24,7 +24,7 @@ export default function Userdashboard() {
           <div className="font-bold text-white p-3 flex justify-between items-center">
             <span className='flex items-center'>
               <GrMenu  className="mr-2 my-1.5   text-large   text-white  hover:text-red-500" />
-              <span className='ml-2 text-large my-1'>Dashboard</span>
+              <span className='ml-3 text-large my-1'>Dashboard</span>
             </span>
             <button className="md:hidden text-white text-xl" onClick={toggleSidebar}>
               <GrClose />
@@ -38,26 +38,32 @@ export default function Userdashboard() {
                 <GrStarOutline  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Membership Plans
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/emojitranslator">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
                 <GrLanguage  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Emoji Translator
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/feature">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
                 <GrServices  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Feature
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/history">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
                 <GrInProgress  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />History
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/Userfeedback">
               <li className="py-2 p-3 hover:bg-white hover:text-black text-white rounded-md cursor-pointer flex items-center">
-                <GrGroup className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />Feedback
+                <GrGroup className="mr-2 my-1 me-5 text-large text-red-500  hover:text-red-500" />Feedback
               </li>
             </Link>
+            <Link to="/history">
+              <li className="py-2 p-3 hover:bg-white text-white  hover:text-black rounded-md cursor-pointer flex items-center">
+                <GrInProgress  className="mr-2 my-1 me-4 text-large text-red-500  hover:text-red-500" />MyOrders
+              </li>
+            </Link>
+           
           </ul>
         </div>
   

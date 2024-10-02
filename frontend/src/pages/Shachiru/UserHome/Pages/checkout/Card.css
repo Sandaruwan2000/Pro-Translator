@@ -1,0 +1,121 @@
+
+.Creditcard {
+    background: #16181a;
+    background-image: url("../../../../../Image/card1.jpg");
+    background-size: cover;
+    border-radius: 14px;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+    padding: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 2px 10px 40px black;
+    z-index: 99;
+   
+  }
+  .Creditcard:hover{
+    transform:scale(1.1);
+ 
+  }
+  
+  .Creditcard .logo-card {
+    max-width: 50px;
+    margin-bottom: 15px;
+    margin-top: -19px;
+  }
+  
+  .Creditcard label {
+    display: flex;
+    font-size: 10px;
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .Creditcard input {
+    font-family: "Work Sans", sans-serif;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: #ffffff;
+    transition: border-bottom 0.4s;
+  }
+  .Creditcard input:focus {
+    border-bottom: 1px solid #e75c16;
+    outline: none;
+  }
+  
+  .Creditcard .cardnumber {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .Creditcard .name {
+    display: block;
+    font-size: 20px;
+    max-width: 200px;
+    float: left;
+    margin-bottom: 15px;
+  }
+  
+  .Creditcard .toleft {
+    float: left;
+  }
+  .Creditcard .ccv {
+    width: 50px;
+    margin-top: -5px;
+    font-size: 15px;
+  }
+  
+ .Creditcard .cardNo{
+
+  width: 100px;
+
+
+ }
+
+  .Creditcard .comprobe {
+    text-align: center;
+  }
+  .Creditcard .proceed {
+    position: absolute;
+    transform: translate(300px, 10px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ea7527;
+    border: none;
+    color: rgb(0, 0, 0);
+    transition: box-shadow 0.2s, transform 0.4s;
+    cursor: pointer;
+    padding:13px;
+  }
+  .Creditcard .proceed i{
+
+    cursor: pointer;
+  }
+  .Creditcard .proceed:active {
+    outline: none;
+  }
+  .Creditcard .proceed:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 5px rgb(255, 255, 255);
+  }
+  .Creditcard  .sendicon {
+    filter: invert(100%);
+    padding-top: 2px;
+  }
+  
+  @media (max-width: 600px) {
+    .proceed {
+      transform: translate(250px, 10px);
+    }
+    .col {
+      display: block;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
