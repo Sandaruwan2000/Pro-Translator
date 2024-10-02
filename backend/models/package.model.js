@@ -1,13 +1,19 @@
 import mongoose from 'mongoose';
 
 const packageSchema = new mongoose.Schema({
+    PkgCode:{
+        type:String,
+        required:true,
+        
+    },
+    
     name:{
         type:String,
         required:true,
         
     },
     duration:{
-        type:String,
+        type:Number,
         required:true,
         
 

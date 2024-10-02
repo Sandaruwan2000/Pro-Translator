@@ -4,6 +4,7 @@ import "./recipt.css";
 import pkg from "./pkg.json"
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 
 export default function Recipt(){
@@ -12,17 +13,27 @@ const id=useParams().id;
 const stage=3;
 
 
-
+const navigate=useNavigate();
 const [Package,setpackage] = useState("");
+const { currentUser } = useSelector((state) => state.user);
+const [currentDate, setCurrentDate] = useState('');
+const [currentTime, setCurrentTime] = useState('');
 
-const pkgid="66e71a158a10cfd24617a4f7";
-const uid=1;
+const formattedPriceValue = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD', 
+}).format(Package.price);
+
 
 
 useEffect(()=>{
 
-   
- getpackage();
+  const today = new Date();
+  const dateString = today.toLocaleDateString(); 
+  setCurrentDate(dateString);
+  const timeString=today.toLocaleTimeString();
+  setCurrentTime(timeString);
+  getpackage();
   
 
 
@@ -32,7 +43,7 @@ const getpackage = async () => {
   try {
     
 
-      const response = await axios.get(`http://localhost:4000/package/fetch/${pkgid}`);
+      const response = await axios.get(`/backend/package/onepackage/${id}`);
      setpackage(response.data);
    
      
@@ -44,10 +55,11 @@ const getpackage = async () => {
 console.log(Package);
 const order={
 
-  orderID :"324234237623476",
+  orderID :"4654",
   ProductID:Package._id,
-  total:99000
-
+  total:formattedPriceValue,
+  PurchasedDate:currentDate
+ 
 
   
 
@@ -56,9 +68,11 @@ const order={
 
 function checkout(){
 
-  axios.post(`http://localhost:4000/order/addOrder/${uid}`,order).then(()=>{
+  axios.post(`/backend/order/addOrder/${currentUser._id}`,order).then(()=>{
 
     alert("Order Confirmed");
+
+    navigate("/");
  
     }).catch((err)=>{
     
@@ -72,6 +86,8 @@ function checkout(){
 
 }
 
+
+
     return(
         <div>
             <Progress stage={stage}/>
@@ -84,8 +100,8 @@ function checkout(){
     <div className="order">
 
       <p> Order No: 1234567890 </p>
-      <p> Date : 4/5/2020 </p>
-      <p> Customer Name</p>
+      <p> Date : {currentDate}   {currentTime}</p>
+      <p> Customer Name:  {currentUser.username}</p>
 
     </div>
 
@@ -102,29 +118,31 @@ function checkout(){
 
         <div className="info">
 
-          <h4> {Package.pkgName} </h4>
-
-          <p> {Package.disciption}</p>
-          <p> {Package.duration}</p>
-
+          <h4> {Package.name} </h4>
+          <br/>
+          <h4>Duration</h4> 
+          <p> {Package.duration} Months</p>
+          <br/>
+          <p> {Package.details}</p>
+          <br/>
         </div>
 
       </div>
-
-      <p> LKR {Package.price} </p>
+     
+      <p> <h4>Amount:</h4> {formattedPriceValue} </p>
 
     </div>
 
 
     <div className="totalprice">
 
-      <p className="sub"> Subtotal <span className="Pricelist"> {Package.price}  </span></p>
+      <p className="sub"> Subtotal <span className="Pricelist">   </span></p>
 
       <p className="del"> Additionals <span  className="Pricelist"> LKR 10.00  </span> </p>
 
       <hr/>
 
-      <p className="tot"> Total <span  className="Pricelist">LKR {Package.price+10} </span> </p>
+      <p className="tot"> Total <span  className="Pricelist">{formattedPriceValue} </span> </p>
 
 <div className="btnSpan">
 <a className="button btn1" onClick={checkout} >checkout

@@ -124,10 +124,8 @@ export default function Emojitranslator() {
     };
 
     return (
-        <div className='flex' >
-            <div>
-                <Userdashboard />
-            </div>
+        <div  >
+           
 
             <div className="ml-auto flex-1 overflow-y-auto" >
                 <div>

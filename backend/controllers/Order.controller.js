@@ -9,7 +9,9 @@ const Uid=req.params.uid;
     
         orderID,
         ProductID,
-        total
+        total,
+        PurchasedDate
+        
        
     
     
@@ -26,6 +28,7 @@ const Uid=req.params.uid;
         orderID,
         ProductID,
         total,
+        PurchasedDate,
         userID:Uid
     
     
@@ -56,7 +59,7 @@ const Uid=req.params.uid;
 
         const userID = req.params.uid;
 
-        await Order.find({userID}).populate("ProductID").then((orders)=>{
+        await Order.find({userID}).populate({ path: 'ProductID', populate: { path: 'PkgCode' } }).then((orders)=>{
         
         res.json(orders);
         

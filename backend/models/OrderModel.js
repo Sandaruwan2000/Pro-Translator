@@ -8,8 +8,9 @@ const schema=mongoose.Schema;
 const Order_Scheama=new schema({
     orderID:{type:String},
     ProductID:{type:schema.Types.ObjectId,ref:"Package",required:true},
-    total:{type:Number},
-    userID: { type:schema.Types.ObjectId,ref:"User",required:true}
+    total:{type:String},
+    userID: { type:schema.Types.ObjectId,ref:"User",required:true},
+    PurchasedDate:{type:Date,required:true}
 
 
 
