@@ -4,10 +4,12 @@ import { Toast, Spinner, Container, Row, Col, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa'; // Import the delete icon
 import "./FavoritePage.css"
+import { useSelector } from 'react-redux';
 
 const FavoritePage = () => {
   const [favorites, setFavorites] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { currentUser } = useSelector((state) => state.user);
   const [error, setError] = useState(null);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
@@ -17,7 +19,7 @@ const FavoritePage = () => {
   useEffect(() => {
     const fetchFavorites = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/favourite/get');
+        const response = await axios.get(`http://localhost:4000/favourite/get/${currentUser._id}`);
         setFavorites(response.data);
       
       } catch (error) {

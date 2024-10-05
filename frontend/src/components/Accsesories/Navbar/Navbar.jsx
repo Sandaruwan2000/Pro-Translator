@@ -6,6 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 
 
+
 export default function NavBar(){
 
   const { currentUser } = useSelector((state) => state.user);
@@ -17,8 +18,8 @@ export default function NavBar(){
   
 useEffect(()=>{
 
-  
-  getpackages();
+
+ getpackages();
   chkpkgs();
   console.log(isEmoji,isGlossery);
  
@@ -26,7 +27,24 @@ useEffect(()=>{
 
 
 },[])
+const confirmSignOut = async () => {
+  
+  
+  try {
+    dispatch(signOutUserStart())
+    const res = await fetch('/backend/auth/signout');
+    const data  = await res.json();
+    if(data.success === false) {
+      dispatch(signOutUserFailure(data.message));
+      return;
+    }
+      dispatch(signOutUserSuccess(data));
+      window.location.href = '/signin';
+  }catch (error){
+    dispatch(signOutUserFailure(data.message));
 
+  }
+}
 
 const getpackages = async () => {
   try {

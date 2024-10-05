@@ -8,12 +8,13 @@ import Form from 'react-bootstrap/Form';
 import RiseLoader from "react-spinners/ClipLoader";
 import './Translate.css';
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 export default function Translator(){
 
 
-
+  const { currentUser } = useSelector((state) => state.user);
     const [sourceText, setSourceText] = useState("");
     const [translatedText, setTranslatedText] = useState("");
     const [sourceLang, setSourceLang] = useState("en");
@@ -101,7 +102,9 @@ export default function Translator(){
           text: sourceText,
           sourceLang,
           targetLang,
-          translatedText
+          translatedText,
+          userId: currentUser._id
+
         });
        
         setalertMessage("Translation updated successfully!");
@@ -114,7 +117,7 @@ export default function Translator(){
           translatedText,
           sourceLang,
           targetLang,
-          userId: 1
+          userId: currentUser._id
         });
       
         setalertMessage("Translation saved to favorites!");

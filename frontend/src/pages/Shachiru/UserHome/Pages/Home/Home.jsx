@@ -6,6 +6,8 @@ import HomeVedio from "../../../../../Image/home.mp4"
 export default function Home(){
   
 
+
+
   return (
     <div className="container mt-4">
     <video  loop autoPlay id="myVideo">
@@ -20,7 +22,7 @@ export default function Home(){
                 </h1>
                 <h4 className="blackish">We offer special services And Features!</h4>
                 <div className="two-button">
-                    <button className="w-btn btn">View Our Features</button>
+                    <button className="w-btn btn" >View Our Features</button>
                     <button className="t-btn btn">About Us</button>
                 </div>
 
