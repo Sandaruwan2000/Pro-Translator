@@ -1,0 +1,163 @@
+
+/* The Receipt */
+.receipt {
+    width: 360px;
+    height: 800px;
+    background-color: rgb(233, 134, 85);
+    background-image: url("../../../../../Image/recipt.jpg");
+    background-size: cover;
+    border-radius: 30px;
+    position: relative;
+        left: 50%;
+   
+    margin-left: -180px;
+    
+    border: 2px solid #fa8415;
+    box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+    box-shadow: 0rem 0.5rem 1rem -0.125rem rgba(0, 0, 0, 0.25);
+    padding: 20px
+  }
+  
+  /* Heading */
+  .receipt .name {
+    text-transform: uppercase;
+   
+    justify-content: center;
+    color: #ffffff;
+    letter-spacing: 10px;
+    font-size: 1.8em;
+    margin: 10px;
+    width: 100%;
+  }
+  
+ 
+  .receipt .order{
+ 
+    padding-top: 10px;
+  }
+ 
+  .receipt .order p {
+    font-size: 13px;
+    color: #ffffff;
+    padding-left: 10px;
+    letter-spacing: .7px
+  }
+
+  .receipt hr {
+    border: .7px solid #ed6b00;
+    margin: 15px 0;
+  }
+  
+  /* Order details */
+  .receipt .details {
+    padding-left: 10px;
+    margin-bottom: 35px;
+    overflow: hidden
+  }
+  
+  .receipt .details h3 {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 15px
+  }
+  
+  /* Image and the info of the order */
+  .receipt .product {
+    float: left;
+    width: 83%
+  }
+  
+  .receipt  .product img {
+    width: 65px;
+    float: left
+  }
+  
+  .receipt .product .info {
+    float: left;
+    
+  }
+  
+  .receipt .product .info h4 {
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 10px
+  }
+  
+  .product .info p {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  
+  /* Net price */
+  .receipt .details > p {
+    color: #ffffff;
+    margin-top: 25px;
+    font-size: 15px
+  }
+  
+  /* Total price */
+  .receipt .totalprice p {
+    padding-left: 10px
+  }
+  
+  .receipt .totalprice .sub,
+  .totalprice .del {
+    font-size: 13px;
+    color: #ffffff
+  }
+  
+  .receipt .totalprice span.Pricelist {
+    float: right;
+    margin-right: 17px
+  }
+  
+  .receipt .totalprice .tot {
+    color: #ffffff;
+    font-size: 15px
+  }
+  
+  /* Footer */
+  .receipt  footer {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 135px; 
+    color: #ffffff;
+  }
+
+  .receipt .btnSpan{
+    position: relative;
+  
+    width: 100%;
+    bottom:-50px;
+    padding: 30px;
+  }
+
+  .receipt .button {
+    background-color: #ed6b00;
+    box-shadow: 0rem 0.5rem 1rem -0.125rem rgba(0, 0, 0, 0.25);
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  
+  .receipt .button:hover {
+    box-shadow: 0rem 0rem 1rem -0.125rem rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.5rem);
+  }
+
+  .receipt .button.btn1{
+
+
+float: left;
+
+  }
+
+  .receipt .button.btn2{
+
+    float: right;
+  }

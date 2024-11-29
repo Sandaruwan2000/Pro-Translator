@@ -1,0 +1,191 @@
+.header{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+
+
+}
+.header span.head {
+
+  
+  
+    text-align: center;
+ 
+    align-items: center;
+
+
+}
+.header span.head.title{
+
+  display: inline-flex;
+    padding-top: 13px;
+    margin-left: 30px;
+
+    font-size: 30px;
+
+  
+}
+
+
+.title .titleWord{
+
+  
+
+   line-height: 1.75rem;
+   font-weight: 700;
+
+}
+
+
+.title .titleWord.T2{
+    color:orangered;
+
+}
+
+
+
+
+
+.header .TitleLogo{
+    
+    width: 50px;
+    margin: 0;
+    margin-right: 10px;
+    position: relative;
+    top:0px;
+  
+}
+.header span.head.profile{
+
+margin-right: 80px;
+padding-top: 8px;
+font-size: 40px;
+
+
+}
+.header span.head.profile i:hover{
+    transform: scale(1.2);
+}
+
+
+
+.navi {
+    
+    top: 0.3rem;
+  
+    right: 0;
+    width: max-content;
+height: 70px;
+z-index: 7;
+    margin: auto;
+    margin-top: 0;
+    margin-right: 225px;
+ 
+    padding: 0.1rem 50px;
+    padding-top: 8px;
+    box-shadow: 0 0 10px #0005;
+    justify-content: center;
+  
+    gap: 0.7rem;
+    font-size: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: none;
+ 
+    backdrop-filter: blur(10px);
+   border: 2px solid  #fa8415;
+   box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+  
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(227,81,13,0.3310574229691877) 22%, rgba(225,94,15,0.08735994397759106) 55%, rgba(224,106,16,0.20780812324929976) 83%, rgba(0,212,255,0) 100%);
+
+    overflow: hidden;
+ 
+}
+.navi  a {
+      position: relative;
+      display: inline-block;
+      padding: 0.1rem;
+      margin-left: 40px;
+      margin-right: 40px;
+      z-index: 8;
+      color: inherit;
+      text-decoration: none;
+      text-shadow: 0 0 5px rgba(#000, 0.8);
+      letter-spacing: 2px;
+ }
+
+ .navi  a i{
+position: relative;
+    z-index: 8;
+ }
+ .navi  a i:hover{
+
+transform: scale(1.2);
+transform: translate(0, -8px);
+
+
+ }
+    
+.navi a:before {
+        content: '\2605';
+        position: absolute;
+        right: 100%;
+        
+        font-family: 'Potta One', system-ui;
+        font-size: 0.9em;
+        
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 10px;
+        transition: all 0.3s;
+        
+        pointer-events: none;    
+      }
+.navi a::after{
+
+    color: #fa8415;
+}
+    
+
+
+.tooltiptext {
+    visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 12px;
+  
+ 
+  position: absolute;
+  z-index:8;
+  top: 100%;
+  left: 50%;
+   margin-top: 2px;
+  margin-left: -60px;
+}
+ .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+  
+  .navi  a i:hover .tooltiptext {
+    visibility: visible;
+  }
