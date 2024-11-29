@@ -7,13 +7,18 @@ export default defineConfig({
   server: {
     proxy: {
     '/backend' : {
-      target : 'http://localhost:3000',
+      target : 'http://localhost:5000',
       secure: false,
     },
   },
 },
   plugins: [react()],
 
-
+  optimizeDeps: {
+    include: ['regenerator-runtime/runtime']
+  },
+  build: {
+    target: ['es2017'],
+  }
   
 })

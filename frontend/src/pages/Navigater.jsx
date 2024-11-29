@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Userdashboard from '../components/Userdashboard';
+import { useNavigate } from 'react-router-dom';
 
-export default function Home() {
+export default function Navigater() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const { currentUser } = useSelector(state => state.user);
   const isAdmin = currentUser && currentUser.email === 'admin@gmail.com'; 
-
+  const navigate=useNavigate();
   const handleMouseMove = (e) => {
     if (e.clientX < 50) {
       setIsSidebarVisible(true);
@@ -14,6 +15,17 @@ export default function Home() {
       setIsSidebarVisible(false);
     }
   };
+
+
+
+  useEffect(() => {
+   if(!isAdmin){
+
+    navigate("/UserHome");
+   }
+
+  }, []);
+  
 
   return (
     <div 

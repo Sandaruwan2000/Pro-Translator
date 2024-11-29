@@ -1,0 +1,18 @@
+.pkg{
+
+    box-shadow:  0 0 5px #fa8415, 0 0 5px #fa8415 inset;
+    
+backdrop-filter: blur(2.2px);
+-webkit-backdrop-filter: blur(2.2px);
+
+}
+.pkg:hover{
+    background-color: #e7a26185;
+}
+
+.searchPkg{
+
+    position: relative;
+    left: -295px;
+    margin-left: 0;
+}
